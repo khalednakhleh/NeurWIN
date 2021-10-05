@@ -1,0 +1,15 @@
+
+# DEADLINE (4 choose 1) 
+
+python3 main.py --max-episode 2000 --max_episode_length 300 --save_episode_interval 10 --env deadline --testing_episode_interval 10 --warmup 128 --gamma 0.99 --c-lr 0.001 --p-lr 0.001 --bsize 64 --rmsize 6000000 --epsilon 80000 --env_seed 30 --k_ratio 1 --seed 30 --gpu-ids -1 --mode test --test-episode 2000 --test_runs 50 --arms 4 --scheduleArms 1  --hidden1 24 --hidden2 16
+
+# RECOVERING
+
+python3 main.py --max-episode 10000 --max_episode_length 300 --save_episode_interval 10 --env recovering --testing_episode_interval 100 --warmup 128 --gamma 0.99 --c-lr 0.001 --p-lr 0.001 --bsize 64 --rmsize 6000000 --epsilon 80000 --env_seed 30 --k_ratio 1 --seed 30 --gpu-ids -1 --mode test --test-episode 10000 --test_runs 1 --arms 4 --scheduleArms 1 --hidden1 28 --hidden2 16
+
+
+# SIZE AWARE 
+
+
+
+python3 main.py --max-episode 30000 --max_episode_length 300 --save_episode_interval 1000 --env size_aware --testing_episode_interval 1000 --warmup 128 --gamma 0.99 --c-lr 0.001 --p-lr 0.001 --bsize 64 --rmsize 6000000 --epsilon 80000 --env_seed 30 --k_ratio 1 --seed 30 --gpu-ids -1 --mode test --test-episode 30000 --test_runs 50 --arms 4 --scheduleArms 1  --hidden1 24 --hidden2 16

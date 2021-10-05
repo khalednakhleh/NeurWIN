@@ -1,0 +1,12 @@
+
+
+# SIZE AWARE TRAINING: (4 choose 1 hidden1 24 hidden2 16) (10 choose 1 hidden1 38  hidden2 20)
+python3 main.py --max-episode 30000 --max_episode_length 300 --save_episode_interval 500 --env size_aware --warmup 128 --gamma 0.99 --c-lr 0.001 --p-lr 0.001 --bsize 64 --rmsize 6000000 --epsilon 80000 --env_seed 50 --k_ratio 1 --seed 50 --gpu-ids -1 --mode train --arms  --scheduleArms 1 --hidden1 --hidden2
+
+
+# DEADLINE TRAINING: (4 choose 1 hidden1 24 hidden2 16) (10 choose 1 hidden1 38  hidden2 20)
+python3 main.py --max-episode 2000 --max_episode_length 300 --save_episode_interval 5 --env deadline --warmup 128 --gamma 0.99 --c-lr 0.001 --p-lr 0.001 --bsize 64 --rmsize 6000000 --epsilon 80000 --env_seed 50 --k_ratio 1 --seed 50 --gpu-ids -1 --mode train --arms  --scheduleArms 1 --hidden1 --hidden2
+
+
+# RECOVERING TRAINING: (4 choose 1 hidden1 28 hidden2 16) (10 choose 1 hidden1 48  hidden2 20) 
+python3 main.py --max-episode 30000 --max_episode_length 300 --save_episode_interval 100 --env recovering --warmup 128 --gamma 0.99 --c-lr 0.001 --p-lr 0.001 --bsize 64 --rmsize 6000000 --epsilon 80000 --env_seed 50 --k_ratio 1 --seed 50 --gpu-ids -1 --mode train --arms  --scheduleArms 1 --hidden1 --hidden2
